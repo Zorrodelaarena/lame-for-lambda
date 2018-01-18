@@ -135,3 +135,9 @@ exports.lame = function (options) {
 		}
 	]);
 };
+
+exports.cleanup = function () {
+	if (lamePath && fs.existsSync(lamePath)) {
+		fs.unlinkSync(lamePath);
+	}
+};
